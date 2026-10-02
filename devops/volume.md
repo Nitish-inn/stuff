@@ -32,6 +32,14 @@ Docker Volume
 Database data
 Now you can delete and recreate the container, while the volume keeps the data.
 Example: Creating a Volume
+
+
+
+
+STEP 1
+
+
+
 Step 1 — Create a volume
 docker volume create myvolume
 Docker creates a volume called:
