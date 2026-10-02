@@ -1,0 +1,468 @@
+ubuntu@ip-172-31-39-35:~/TASK/day17$ history
+    1  ls
+    2  mkdir file
+    3  ls
+    4  whoami
+    5  hostname
+    6  sudo shutdown - now
+    7  sudo shutdown -h now
+    8  ls
+    9  cd scripts
+   10  ls
+   11  vim hello_chattur.sh
+   12  ls
+   13  ls -l
+   14  chmod 764 hello_Chattur.sh
+   15  chmod 764 hello_chattur.sh
+   16  ls -l
+   17  ./hello_chatur.sh
+   18  ./hello_chattur.sh
+   19  vim hello_chattur.sh
+   20  ls
+   21  ./hello_chattur.sh
+   22  ls
+   23  cat she.txt
+   24  cat her.txt
+   25  vim hello_chattur.sh
+   26  vim 3_idiots.sh
+   27  cd
+   28  stop
+   29  .exit
+   30  exit
+   31  ls
+   32  mkdir devops
+   33  mkdir -p devops
+   34  mkdir - p scripts
+   35  CLEAR
+   36  clear
+   37  sudo apt-get update
+   38  sudo apt-get install docker.io
+   39  docker --version
+   40  systemctl status docker
+   41  whoami
+   42  docker ps
+   43  systemctl status docker
+   44  docker ps
+   45  cat /etc/group
+   46  whoami
+   47  sudo usermod -aG docker $user
+   48  sudo usermod -aG docker $USER
+   49  cat /etc/group
+   50  newgrp docker
+   51  docker ps
+   52  docker run -it ubuntu
+   53  docker ps
+   54  docker run -d -p 80:80 nginx
+   55  dcoker run itubuntu
+   56  docker ps
+   57  docker logs eager_fermi
+   58  Test-NetConnection localhost -Port 80
+   59  docker port eager_fermi
+   60  docker logs eager_fermi
+   61  docker port eager_fermi
+   62  docker stop
+   63  docker ps
+   64  docker stop 8253872508d5
+   65  docker ps
+   66  docker login -u nitishgupta55
+   67  docker ps
+   68  docker run -d -p 80:80 nginx
+   69  ls
+   70  cd downloads
+   71  ls
+   72  cd devops
+   73  ls
+   74  cd ..
+   75  pwd
+   76  ls
+   77  cd scripts
+   78  ls
+   79  cd ..
+   80  ls
+   81  cd  ubuntu
+   82  mkdir github
+   83  ls
+   84  cd devops
+   85  ls
+   86  cd file
+   87  cd ..
+   88  cd file
+   89  ls
+   90  cd ..
+   91  cd p
+   92  ls
+   93  cd scripts
+   94  cd ..
+   95  cd scripts
+   96  ls
+   97  cd ..
+   98  ls
+   99  ls
+  100  pwd
+  101  ls
+  102  docker ls
+  103  dockerls
+  104  docker ls
+  105  docker ps
+  106  docker stop ngnix mysql flask-app
+  107  docker rm mysql flaskapp
+  108  docker rm flask-app
+  109  docker ps
+  110  docker rm 0b7
+  111  docker stop 0b7
+  112  docker rm 0b7
+  113  docker ps
+  114  cd giyhub
+  115  cd github
+  116  ls
+  117  cd ..
+  118  cd devops
+  119  ls
+  120  cd ..
+  121  cd scripts
+  122  ls
+  123  cd ..
+  124  ls
+  125  cd file
+  126  ls
+  127  cd ..
+  128  cd github
+  129  git clone https://github.com/LondheShubham153/two-tier-flask-app.git
+  130  ls
+  131  cd two-tier-flask-app
+  132  ls
+  133  cd dockerfile
+  134  cd Dokcerfile
+  135  cat dockerfile
+  136  vim Dockerfile
+  137  cat Dockerfile
+  138  history
+  139  ls
+  140  cat app.py
+  141  docker ps
+  142  ls
+  143  cat message.sql
+  144  cat docker-compose.yml
+  145  dcoker compose up
+  146  sudo apt-get install docker-compose-v2
+  147  dcoker compose up
+  148  docker compose up
+  149  docker compose down
+  150  ls
+  151  vim docker-compose.yml
+  152  docker compose up
+  153  ls
+  154  mkdir task
+  155  ls
+  156  cd task
+  157  touch fil.txt
+  158  cat fil.txt
+  159  cd fil.txt
+  160  echo "i m nitish" > fil.txt
+  161  ls
+  162  cat fil.txt
+  163  vim fil.txt
+  164  cat fil.txt
+  165  cat -n fil.txt
+  166  chomd 700 fil.txt
+  167  chmod 700 fil.txt
+  168  ls -l
+  169  history | tail:10
+  170  history | tail=10
+  171  ls
+  172  history | tail -10
+  173  echo -e "About me\n$(cat fio.txt)" > color.txt
+  174  echo -e "About me\n$(cat fil.txt)" > color.txt
+  175  ls
+  176  cat color.txt
+  177  ls
+  178  cd devops
+  179  ls
+  180  vim directry.sh
+  181  ./directry.sh day 1 90
+  182  chmod +x directry.sh
+  183  ./directry.sh day 1 90
+  184  ls
+  185  ./directry.sh day 50 100
+  186  ls
+  187  mkdir backup.sh
+  188  ls
+  189  cd backup.sh
+  190  vim backcup.sh
+  191  ls
+  192  cmod +x backup.sh
+  193  chmod +x backup.sh
+  194  ./backup.sh
+  195  cd ..
+  196  ls
+  197  chmod +x backup.sh
+  198  ./backup.sh
+  199  yes
+  200  ls
+  201  cd devops
+  202  ls
+  203  ./backup.sh
+  204  chmod +x backup.sh
+  205  ./backup.sh
+  206  ls -l baxckup.sh
+  207  ls -l backup.sh
+  208  chmod 777 backup.sh
+  209  ./backup.sh
+  210  chmod 755 backup.sh
+  211  ./backup.sh
+  212  cd backup.sh
+  213  ./backup.sh
+  214  chmod 755 backup.sh
+  215  cd ..
+  216  cd backup.sh
+  217  cd ..
+  218  ./backup.sh
+  219  ls
+  220  cd backup.sh
+  221  pwd
+  222  cat backup.sh
+  223  cd ..
+  224  cat backup.sh
+  225  ls -la backup.sh
+  226  rmdir backup.sh
+  227  rm backup.sh
+  228  rmdir backup.sh
+  229  ls
+  230  cd backup.sh
+  231  rmdir backup.sh
+  232  rm -r backup.sh
+  233  cd ..
+  234  rm -r backup.sh
+  235  ls
+  236  vim backup.sh
+  237  l
+  238  chmod +x backup.sh
+  239  ./bcakup.sh
+  240  ./backup.sh
+  241  ls
+  242  cd backup.sh
+  243  ls
+  244  cat bcakup.sh
+  245  cat backup.sh
+  246  ./backup.sh
+  247  ./backup.sh day 1 20
+  248  ls
+  249  cat bcakup.sh
+  250  cat backup.sh
+  251  cd backup.sh
+  252  cd day 1
+  253  cd day1
+  254  ls
+  255  cd ..
+  256  clear
+  257  cd ..
+  258  mkdir day6
+  259  cd day6
+  260  touch file.txt
+  261  ls
+  262  cd file.txt
+  263  ls -ltr
+  264  useradd sneha
+  265  sudo useradd chotu
+  266  chown chotu file.txt
+  267  chown -f chown file.txt
+  268  sudo chown chotu file.txt
+  269  ls -ltr
+  270  sudo chgrp newgrp file.txt
+  271  sudo chgrp newgroup file.txt
+  272  cd devops
+  273  day6
+  274  ls
+  275  cd day6
+  276  ls
+  277  cat day6
+  278  mkdir day6
+  279  cd ..
+  280  ls
+  281  cd day6
+  282  ls
+  283  cd day6
+  284  ls
+  285  cd ..
+  286  rm day6
+  287  cd ..
+  288  rmday6
+  289  rmdir day6
+  290  rm -r devops/day6
+  291  cd day6
+  292  rm day6
+  293  rmdir day6
+  294  ls
+  295  touch file.txtx
+  296  ls
+  297  rm file.txtx
+  298  ls
+  299  cd..
+  300  cd ..
+  301  mkdir TASK
+  302  TOUCH day6
+  303  touch day6
+  304  ls
+  305  rm day6
+  306  cd task
+  307  mkdir day6
+  308  cd day6
+  309  touch file.txt
+  310  echo "hello dost"> file.txt
+  311  ls
+  312  cat file.txt
+  313  ls -ltr day6.txt
+  314  cd ..
+  315  ls -ltr day6.txt
+  316  ls
+  317  cd ..
+  318  ls
+  319  rm -r task/
+  320  ls
+  321  rm -r day6/
+  322  ls
+  323  cd task
+  324  cd TASK
+  325  LS
+  326  ls
+  327  mkdir day6
+  328  cd day6
+  329  touch file.txt
+  330  echo "hello dost">file.txt
+  331  ls
+  332  cd ..
+  333  cd -ltr file.txt
+  334  lslsa -ltr file.txt
+  335  ls -ltr file.txt
+  336  ls -ltr day6
+  337  sudo chgrp newgrop day6
+  338  cd day6
+  339  sudo chgrp newgrop file.txt
+  340  ls -ltr file.txt
+  341  sudo chgrp newgrop file.txt
+  342  group add new
+  343  groupadd newgroup
+  344  sudo groupadd newgroup
+  345  sudo chgrp newgroup file.txt
+  346  ls -ltr file.txt
+  347  cd TASK
+  348  ls
+  349  mkdir day7
+  350  ls:wq
+  351  ls
+  352  cd day7
+  353  ls
+  354  sudo apt install docker.io
+  355  sudo apt install default-jre
+  356  vim startstop.sh
+  357  chmod +x startstop.sh
+  358  ./create startstop.sh
+  359  cd ..
+  360  ./create startstop.sh
+  361  cd day7
+  362  ./startstop.sh
+  363  vim startstop.sh
+  364  ./startstop.sh
+  365  ls
+  366  mkdir docker
+  367  ls
+  368  cd TASK
+  369  LS
+  370  ls
+  371  mkdir day16
+  372  ls
+  373  cd day16
+  374  docker --version
+  375  systemctl status docker
+  376  docker ps
+  377  docker run hello
+  378  docker run hello-world
+  379  docker ps
+  380  docker inspect hello-world
+  381  docker run -d -p 8181:82 --name conatiner_1 nginx
+  382  docker port conatiner_1
+  383  docker stats
+  384  cd..
+  385  cd ..
+  386  mkdir day17
+  387  cd day17
+  388  ls
+  389  docker ps
+  390  ls
+  391  cd TASK
+  392  ls
+  393  cd day17
+  394  ls
+  395  docker images
+  396  docker ps
+  397  vim app.py
+  398  ls
+  399  vim requirement.txt
+  400  ls
+  401  vim dockerfile
+  402  dcoker build -t flask-app .
+  403  docker build -t flask-app .
+  404  vim dockerfile
+  405  docker build -t flask-app .
+  406  vim dockerfile
+  407  docker build -t flask-app .
+  408  docker run -d -p 1000:1000 flask-app
+  409  ls
+  410  vim app.py
+  411  docker ps
+  412  docker rm -f flask-app
+  413  docker ps
+  414  docker run -d -p 1000:1000 --name my-flask flask-app
+  415  docker ps
+  416  docker ps -a
+  417  docker log my-flask
+  418  docker logs my-flask
+  419  vim app.py
+  420  docker run -d -p 1000:1000 --name my-flask flask-app
+  421  docker ps
+  422  docker rm -f flask-app
+  423  dcoker build -t flask-app
+  424  docker build -t flask-app
+  425  docker build -t flask-app .
+  426  docker run -d -p 1000:1000 --name my-flask flask-app
+  427  docker rm -my-flask
+  428  docker ps
+  429  docker rm -f my-flask
+  430  docker run -d -p 1000:1000 --name her-flask flask-app
+  431  docker ps
+  432  docker ps -a
+  433  docker log -her-flask
+  434  docker log her-flask
+  435  docker logs her-flask
+  436  vim app.py
+  437  docker build -t flask-app .
+  438  docker rm -f her-flask
+  439  docker run -d -p 1000:1000 --name she-flask flask-app
+  440  docker ps
+  441  docker ps -a
+  442  docker logs she-flask
+  443  vim app.py
+  444  cat app.py
+  445  docker run -d -p 1000:1000 --name she-flask flask-app
+  446  docker rm -f she-flask
+  447  docker build -t flask-app .
+  448  docker run -d -p 1000:1000 --name her-flask flask-app
+  449  docker ps
+  450  docker tag flask-app ntitishgupta55/flask-app
+  451  docker push nitishgupta55/flask-app
+  452  docker tag her-flask ntitishgupta55/flask-app
+  453  docker tag flask-app:latest ntitishgupta55/flask-app:latest
+  454  docker images
+  455  docker push nitishgupta55/flask-app:latest
+  456  docker rmi nitishgupta55/flask-app:latest
+  457  docker images
+  458  docker rmi nitishgupta55/flask-app:latest
+  459  docker tag flask-app:latest ntitishgupta55/flask-app:latest
+  460  docker push nitishgupta55/flask-app:latest
+  461  docker images
+  462  docker push nitishgupta55/flask-app:latest
+  463  docker tag 6198cc272346 nitishgupta55/flask-app:latest
+  464  docker images | grep flask-app
+  465  docker push nitishgupta55/flask-app:latest
+  466  history
+ubuntu@ip-172-31-39-35:~/TASK/day17$
