@@ -1,0 +1,499 @@
+indows PowerShell
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+PS C:\Users\NITISH GUPTA> cd downloads
+PS C:\Users\NITISH GUPTA\downloads> ssh -i "admin.pem" ubuntu@ec2-13-60-193-55.eu-north-1.compute.amazonaws.com
+Welcome to Ubuntu 26.04 LTS (GNU/Linux 7.0.0-1006-aws x86_64)
+
+ * Documentation:  https://docs.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/pro
+
+ System information as of Fri Oct  2 04:56:01 UTC 2026
+
+  System load:  0.09              Temperature:           -273.1 C
+  Usage of /:   88.0% of 6.61GB   Processes:             131
+  Memory usage: 63%               Users logged in:       0
+  Swap usage:   0%                IPv4 address for ens5: 172.31.39.35
+
+  => / is using 88.0% of 6.61GB
+
+ * Ubuntu Pro delivers the most comprehensive open source security and
+   compliance features.
+
+   https://ubuntu.com/aws/pro
+
+Expanded Security Maintenance for Applications is not enabled.
+
+62 updates can be applied immediately.
+4 of these updates are standard security updates.
+To see these additional updates run: apt list --upgradable
+
+Enable ESM Apps to receive additional future security updates.
+See https://ubuntu.com/esm or run: sudo pro status
+
+
+*** System restart required ***
+Last login: Thu Oct  1 09:04:58 2026 from 45.251.49.114
+ubuntu@ip-172-31-39-35:~$ ls
+-  TASK  devops  docker  file  github  p  scripts
+ubuntu@ip-172-31-39-35:~$ cd TASK
+ubuntu@ip-172-31-39-35:~/TASK$ ls
+day16  day17  day6  day7
+ubuntu@ip-172-31-39-35:~/TASK$ cd day17
+ubuntu@ip-172-31-39-35:~/TASK/day17$ ls
+ubuntu@ip-172-31-39-35:~/TASK/day17$ docker images
+                                                                                                   i Info →   U  In Use
+IMAGE                                        ID             DISK USAGE   CONTENT SIZE   EXTRA
+hello-world:latest                           5e2309035332       25.9kB         9.49kB    U
+mysql:5.7                                    4bc6bc963e6d        700MB          149MB    U
+nginx:latest                                 abe47724e466        242MB         66.3MB    U
+trainwithshubham/two-tier-flask-app:latest   8541f0fea487        792MB          149MB    U
+ubuntu:latest                                da6fc2be5478        160MB         45.3MB    U
+ubuntu@ip-172-31-39-35:~/TASK/day17$ docker ps
+CONTAINER ID   IMAGE                                        COMMAND                  CREATED        STATUS                  PORTS                                             NAMES
+1df1ffe9c6ea   nginx                                        "/docker-entrypoint.…"   20 hours ago   Up 20 hours             80/tcp, 0.0.0.0:8181->82/tcp, [::]:8181->82/tcp   conatiner_1
+8ed8affe1c07   trainwithshubham/two-tier-flask-app:latest   "python app.py"          3 days ago     Up 3 days (unhealthy)   0.0.0.0:5000->5000/tcp, [::]:5000->5000/tcp       flask-app
+abc3a01f6e0c   mysql:5.7                                    "docker-entrypoint.s…"   3 days ago     Up 3 days (healthy)     3306/tcp, 33060/tcp                               mysql
+ubuntu@ip-172-31-39-35:~/TASK/day17$ vim app.py
+ubuntu@ip-172-31-39-35:~/TASK/day17$
+ubuntu@ip-172-31-39-35:~/TASK/day17$ ls
+app.py
+ubuntu@ip-172-31-39-35:~/TASK/day17$ vim requirement.txt
+ [New] 1L, 13B written
+ubuntu@ip-172-31-39-35:~/TASK/day17$ ls
+app.py  requirement.txt
+ubuntu@ip-172-31-39-35:~/TASK/day17$ vim dockerfile
+ubuntu@ip-172-31-39-35:~/TASK/day17$ vim dockerfile
+ubuntu@ip-172-31-39-35:~/TASK/day17$ dcoker build -t flask-app .
+Command 'dcoker' not found, did you mean:
+  command 'docker' from snap docker (29.8.0)
+  command 'docker' from snap docker (29.6.1)
+  command 'docker' from deb podman-docker (5.7.0+ds2-3build1)
+  command 'docker' from deb docker.io (29.1.3-0ubuntu4.1)
+See 'snap info <snapname>' for additional versions.
+ubuntu@ip-172-31-39-35:~/TASK/day17$ docker build -t flask-app .
+DEPRECATED: The legacy builder is deprecated and will be removed in a future release.
+            Install the buildx component to build images with BuildKit:
+            https://docs.docker.com/go/buildx/
+
+Sending build context to Docker daemon  4.096kB
+Error response from daemon: dockerfile parse error on line 10: COPY requires at least two arguments, but only one was provided. Destination could not be determined
+ubuntu@ip-172-31-39-35:~/TASK/day17$ vim dockerfile
+ubuntu@ip-172-31-39-35:~/TASK/day17$ "dockerfile" 18L, 325B written
+ubuntu@ip-172-31-39-35:~/TASK/day17$ docker build -t flask-app .
+DEPRECATED: The legacy builder is deprecated and will be removed in a future release.
+            Install the buildx component to build images with BuildKit:
+            https://docs.docker.com/go/buildx/
+
+Sending build context to Docker daemon  4.096kB
+Error response from daemon: dockerfile parse error on line 10: COPY requires at least two arguments, but only one was provided. Destination could not be determined
+ubuntu@ip-172-31-39-35:~/TASK/day17$ vim dockerfile
+ubuntu@ip-172-31-39-35:~/TASK/day17$ docker build -t flask-app .
+DEPRECATED: The legacy builder is deprecated and will be removed in a future release.
+            Install the buildx component to build images with BuildKit:
+            https://docs.docker.com/go/buildx/
+
+Sending build context to Docker daemon  4.096kB
+Step 1/7 : FROM python:3.9-slim
+3.9-slim: Pulling from library/python
+b3ec39b36ae8: Pulling fs layer
+ea56f685404a: Pulling fs layer
+fc7443084902: Pulling fs layer
+38513bd72563: Pulling fs layer
+ea56f685404a: Download complete
+b3ec39b36ae8: Download complete
+fc7443084902: Download complete
+a5e5b1b19090: Download complete
+967a6079ce08: Download complete
+38513bd72563: Download complete
+38513bd72563: Pull complete
+b3ec39b36ae8: Pull complete
+fc7443084902: Pull complete
+ea56f685404a: Pull complete
+Digest: sha256:2d97f6910b16bd338d3060f261f53f144965f755599aab1acda1e13cf1731b1b
+Status: Downloaded newer image for python:3.9-slim
+ ---> 2d97f6910b16
+Step 2/7 : WORKDIR /app
+ ---> Running in 83f89074e401
+ ---> Removed intermediate container 83f89074e401
+ ---> c3dde7daa4ed
+Step 3/7 : COPY requirement.txt requirement.txt
+ ---> c88fa824d932
+Step 4/7 : RUN pip install -r requirement.txt
+ ---> Running in a6dc45ab7f69
+Collecting Flask==3.0.3
+  Downloading flask-3.0.3-py3-none-any.whl (101 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 101.7/101.7 kB 7.8 MB/s eta 0:00:00
+Collecting blinker>=1.6.2
+  Downloading blinker-1.9.0-py3-none-any.whl (8.5 kB)
+Collecting importlib-metadata>=3.6.0
+  Downloading importlib_metadata-8.7.1-py3-none-any.whl (27 kB)
+Collecting itsdangerous>=2.1.2
+  Downloading itsdangerous-2.2.0-py3-none-any.whl (16 kB)
+Collecting Jinja2>=3.1.2
+  Downloading jinja2-3.1.6-py3-none-any.whl (134 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 134.9/134.9 kB 19.9 MB/s eta 0:00:00
+Collecting click>=8.1.3
+  Downloading click-8.1.8-py3-none-any.whl (98 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 98.2/98.2 kB 15.3 MB/s eta 0:00:00
+Collecting Werkzeug>=3.0.0
+  Downloading werkzeug-3.1.9-py3-none-any.whl (228 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 228.7/228.7 kB 28.4 MB/s eta 0:00:00
+Collecting zipp>=3.20
+  Downloading zipp-3.23.1-py3-none-any.whl (10 kB)
+Collecting MarkupSafe>=2.0
+  Downloading markupsafe-3.0.3-cp39-cp39-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (20 kB)
+Installing collected packages: zipp, MarkupSafe, itsdangerous, click, blinker, Werkzeug, Jinja2, importlib-metadata, Flask
+Successfully installed Flask-3.0.3 Jinja2-3.1.6 MarkupSafe-3.0.3 Werkzeug-3.1.9 blinker-1.9.0 click-8.1.8 importlib-metadata-8.7.1 itsdangerous-2.2.0 zipp-3.23.1
+WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+
+[notice] A new release of pip is available: 23.0.1 -> 26.0.1
+[notice] To update, run: pip install --upgrade pip
+ ---> Removed intermediate container a6dc45ab7f69
+ ---> bceed4728d59
+Step 5/7 : COPY . .
+ ---> 72dae93c3bde
+Step 6/7 : EXPOSE 1000
+ ---> Running in e5934c4881d2
+ ---> Removed intermediate container e5934c4881d2
+ ---> 40fed944f8e8
+Step 7/7 : CMD ["python", "app.py"]
+ ---> Running in 3447bb6d159a
+ ---> Removed intermediate container 3447bb6d159a
+ ---> 687f305687eb
+Successfully built 687f305687eb
+Successfully tagged flask-app:latest
+ubuntu@ip-172-31-39-35:~/TASK/day17$ docker run -d -p 1000:1000 flask-app
+2589c32fc9ff08baac3fa062da8741c4d50681aa85370a51fcade22acd901622
+ubuntu@ip-172-31-39-35:~/TASK/day17$ ls
+app.py  dockerfile  requirement.txt
+ubuntu@ip-172-31-39-35:~/TASK/day17$ vim app.py
+ubuntu@ip-172-31-39-35:~/TASK/day17$ docker ps
+CONTAINER ID   IMAGE                                        COMMAND                  CREATED        STATUS                  PORTS                                             NAMES
+1df1ffe9c6ea   nginx                                        "/docker-entrypoint.…"   21 hours ago   Up 21 hours             80/tcp, 0.0.0.0:8181->82/tcp, [::]:8181->82/tcp   conatiner_1
+8ed8affe1c07   trainwithshubham/two-tier-flask-app:latest   "python app.py"          3 days ago     Up 3 days (unhealthy)   0.0.0.0:5000->5000/tcp, [::]:5000->5000/tcp       flask-app
+abc3a01f6e0c   mysql:5.7                                    "docker-entrypoint.s…"   3 days ago     Up 3 days (healthy)     3306/tcp, 33060/tcp                               mysql
+ubuntu@ip-172-31-39-35:~/TASK/day17$ docker rm -f flask-app
+flask-app
+ubuntu@ip-172-31-39-35:~/TASK/day17$ docker ps
+CONTAINER ID   IMAGE       COMMAND                  CREATED        STATUS                PORTS                                             NAMES
+1df1ffe9c6ea   nginx       "/docker-entrypoint.…"   21 hours ago   Up 21 hours           80/tcp, 0.0.0.0:8181->82/tcp, [::]:8181->82/tcp   conatiner_1
+abc3a01f6e0c   mysql:5.7   "docker-entrypoint.s…"   3 days ago     Up 3 days (healthy)   3306/tcp, 33060/tcp                               mysql
+ubuntu@ip-172-31-39-35:~/TASK/day17$ docker run -d -p 1000:1000 --name my-flask flask-app
+6c3c37cf18fe69ea243512c859554f12fa4d9eaf763f2f810fede6e66b9c6640
+ubuntu@ip-172-31-39-35:~/TASK/day17$ docker ps
+CONTAINER ID   IMAGE       COMMAND                  CREATED        STATUS                PORTS                                             NAMES
+1df1ffe9c6ea   nginx       "/docker-entrypoint.…"   21 hours ago   Up 21 hours           80/tcp, 0.0.0.0:8181->82/tcp, [::]:8181->82/tcp   conatiner_1
+abc3a01f6e0c   mysql:5.7   "docker-entrypoint.s…"   3 days ago     Up 3 days (healthy)   3306/tcp, 33060/tcp                               mysql
+ubuntu@ip-172-31-39-35:~/TASK/day17$ docker ps -a
+CONTAINER ID   IMAGE         COMMAND                  CREATED          STATUS                      PORTS                                             NAMES
+6c3c37cf18fe   flask-app     "python app.py"          50 seconds ago   Exited (1) 49 seconds ago                                                     my-flask
+2589c32fc9ff   flask-app     "python app.py"          9 minutes ago    Exited (1) 9 minutes ago                                                      lucid_cannon
+1df1ffe9c6ea   nginx         "/docker-entrypoint.…"   21 hours ago     Up 21 hours                 80/tcp, 0.0.0.0:8181->82/tcp, [::]:8181->82/tcp   conatiner_1
+2d2ee8d65be4   hello-world   "/hello"                 21 hours ago     Exited (0) 21 hours ago                                                       pedantic_poincare
+abc3a01f6e0c   mysql:5.7     "docker-entrypoint.s…"   3 days ago       Up 3 days (healthy)         3306/tcp, 33060/tcp                               mysql
+8253872508d5   nginx         "/docker-entrypoint.…"   5 days ago       Exited (0) 5 days ago                                                         eager_fermi
+91e1ee64f8fb   ubuntu        "/bin/bash"              5 days ago       Exited (0) 5 days ago                                                         pensive_bell
+ubuntu@ip-172-31-39-35:~/TASK/day17$ docker log my-flask
+docker: unknown command: docker log
+
+Run 'docker --help' for more information
+ubuntu@ip-172-31-39-35:~/TASK/day17$ docker logs my-flask
+  File "/app/app.py", line 1
+    From flask import Flask
+         ^
+SyntaxError: invalid syntax
+ubuntu@ip-172-31-39-35:~/TASK/day17$ vim app.py
+ubuntu@ip-172-31-39-35:~/TASK/day17$ docker run -d -p 1000:1000 --name my-flask flask-app
+docker: Error response from daemon: Conflict. The container name "/my-flask" is already in use by container "6c3c37cf18fe69ea243512c859554f12fa4d9eaf763f2f810fede6e66b9c6640". You have to remove (or rename) that container to be able to reuse that name.
+
+Run 'docker run --help' for more information
+ubuntu@ip-172-31-39-35:~/TASK/day17$ docker ps
+CONTAINER ID   IMAGE       COMMAND                  CREATED        STATUS                PORTS                                             NAMES
+1df1ffe9c6ea   nginx       "/docker-entrypoint.…"   21 hours ago   Up 21 hours           80/tcp, 0.0.0.0:8181->82/tcp, [::]:8181->82/tcp   conatiner_1
+abc3a01f6e0c   mysql:5.7   "docker-entrypoint.s…"   3 days ago     Up 3 days (healthy)   3306/tcp, 33060/tcp                               mysql
+ubuntu@ip-172-31-39-35:~/TASK/day17$ docker rm -f flask-app
+Error response from daemon: No such container: flask-app
+ubuntu@ip-172-31-39-35:~/TASK/day17$ dcoker build -t flask-app
+Command 'dcoker' not found, did you mean:
+  command 'docker' from snap docker (29.8.0)
+  command 'docker' from snap docker (29.6.1)
+  command 'docker' from deb podman-docker (5.7.0+ds2-3build1)
+  command 'docker' from deb docker.io (29.1.3-0ubuntu4.1)
+See 'snap info <snapname>' for additional versions.
+ubuntu@ip-172-31-39-35:~/TASK/day17$ docker build -t flask-app
+DEPRECATED: The legacy builder is deprecated and will be removed in a future release.
+            Install the buildx component to build images with BuildKit:
+            https://docs.docker.com/go/buildx/
+
+docker: 'docker build' requires 1 argument
+
+Usage:  docker build [OPTIONS] PATH | URL | -
+
+Run 'docker build --help' for more information
+ubuntu@ip-172-31-39-35:~/TASK/day17$ docker build -t flask-app .
+DEPRECATED: The legacy builder is deprecated and will be removed in a future release.
+            Install the buildx component to build images with BuildKit:
+            https://docs.docker.com/go/buildx/
+
+Sending build context to Docker daemon  4.096kB
+Step 1/7 : FROM python:3.9-slim
+ ---> 2d97f6910b16
+Step 2/7 : WORKDIR /app
+ ---> Using cache
+ ---> c3dde7daa4ed
+Step 3/7 : COPY requirement.txt requirement.txt
+ ---> Using cache
+ ---> c88fa824d932
+Step 4/7 : RUN pip install -r requirement.txt
+ ---> Using cache
+ ---> bceed4728d59
+Step 5/7 : COPY . .
+ ---> cb3b283108dc
+Step 6/7 : EXPOSE 1000
+ ---> Running in 663787323cb9
+ ---> Removed intermediate container 663787323cb9
+ ---> 8e8208d76367
+Step 7/7 : CMD ["python", "app.py"]
+ ---> Running in c5ed177794da
+ ---> Removed intermediate container c5ed177794da
+ ---> 4f1850261ddb
+Successfully built 4f1850261ddb
+Successfully tagged flask-app:latest
+ubuntu@ip-172-31-39-35:~/TASK/day17$ docker run -d -p 1000:1000 --name my-flask flask-app
+docker: Error response from daemon: Conflict. The container name "/my-flask" is already in use by container "6c3c37cf18fe69ea243512c859554f12fa4d9eaf763f2f810fede6e66b9c6640". You have to remove (or rename) that container to be able to reuse that name.
+
+Run 'docker run --help' for more information
+ubuntu@ip-172-31-39-35:~/TASK/day17$ docker rm -my-flask
+unknown shorthand flag: 'm' in -my-flask
+
+Usage:  docker rm [OPTIONS] CONTAINER [CONTAINER...]
+
+Run 'docker rm --help' for more information
+ubuntu@ip-172-31-39-35:~/TASK/day17$ docker ps
+CONTAINER ID   IMAGE       COMMAND                  CREATED        STATUS                PORTS                                             NAMES
+1df1ffe9c6ea   nginx       "/docker-entrypoint.…"   21 hours ago   Up 21 hours           80/tcp, 0.0.0.0:8181->82/tcp, [::]:8181->82/tcp   conatiner_1
+abc3a01f6e0c   mysql:5.7   "docker-entrypoint.s…"   3 days ago     Up 3 days (healthy)   3306/tcp, 33060/tcp                               mysql
+ubuntu@ip-172-31-39-35:~/TASK/day17$ docker rm -f my-flask
+my-flask
+ubuntu@ip-172-31-39-35:~/TASK/day17$ docker run -d -p 1000:1000 --name her-flask flask-app
+cf007bcac59c42f3327f23c835c8bdf7eaa6d87fc81f376993a438d31007c95a
+ubuntu@ip-172-31-39-35:~/TASK/day17$ docker ps
+CONTAINER ID   IMAGE       COMMAND                  CREATED        STATUS                PORTS                                             NAMES
+1df1ffe9c6ea   nginx       "/docker-entrypoint.…"   21 hours ago   Up 21 hours           80/tcp, 0.0.0.0:8181->82/tcp, [::]:8181->82/tcp   conatiner_1
+abc3a01f6e0c   mysql:5.7   "docker-entrypoint.s…"   3 days ago     Up 3 days (healthy)   3306/tcp, 33060/tcp                               mysql
+ubuntu@ip-172-31-39-35:~/TASK/day17$ docker ps -a
+CONTAINER ID   IMAGE          COMMAND                  CREATED          STATUS                      PORTS                                             NAMES
+cf007bcac59c   flask-app      "python app.py"          48 seconds ago   Exited (1) 47 seconds ago                                                     her-flask
+2589c32fc9ff   687f305687eb   "python app.py"          16 minutes ago   Exited (1) 16 minutes ago                                                     lucid_cannon
+1df1ffe9c6ea   nginx          "/docker-entrypoint.…"   21 hours ago     Up 21 hours                 80/tcp, 0.0.0.0:8181->82/tcp, [::]:8181->82/tcp   conatiner_1
+2d2ee8d65be4   hello-world    "/hello"                 21 hours ago     Exited (0) 21 hours ago                                                       pedantic_poincare
+abc3a01f6e0c   mysql:5.7      "docker-entrypoint.s…"   3 days ago       Up 3 days (healthy)         3306/tcp, 33060/tcp                               mysql
+8253872508d5   nginx          "/docker-entrypoint.…"   5 days ago       Exited (0) 5 days ago                                                         eager_fermi
+91e1ee64f8fb   ubuntu         "/bin/bash"              5 days ago       Exited (0) 5 days ago                                                         pensive_bell
+ubuntu@ip-172-31-39-35:~/TASK/day17$ docker log -her-flask
+unknown shorthand flag: 'e' in -er-flask
+
+Usage:  docker [OPTIONS] COMMAND [ARG...]
+
+Run 'docker --help' for more information
+ubuntu@ip-172-31-39-35:~/TASK/day17$ docker log her-flask
+docker: unknown command: docker log
+
+Run 'docker --help' for more information
+ubuntu@ip-172-31-39-35:~/TASK/day17$ docker logs her-flask
+  File "/app/app.py", line 8
+    if__name__== '__main__':
+                            ^
+SyntaxError: invalid syntax
+ubuntu@ip-172-31-39-35:~/TASK/day17$ vim app.py
+ubuntu@ip-172-31-39-35:~/TASK/day17$ vim app.py
+
+[1]+  Stopped                    vim app.py
+ubuntu@ip-172-31-39-35:~/TASK/day17$ vim app.py
+
+[2]+  Stopped                    vim app.py
+                                                                                           ^Z
+
+[2]+  Stopped                    vim app.py
+ubuntu@ip-172-31-39-35:~/TASK/day17$ vim app.py
+ubuntu@ip-172-31-39-35:~/TASK/day17$ docker build -t flask-app .
+DEPRECATED: The legacy builder is deprecated and will be removed in a future release.
+            Install the buildx component to build images with BuildKit:
+            https://docs.docker.com/go/buildx/
+
+Sending build context to Docker daemon   29.7kB
+Step 1/7 : FROM python:3.9-slim
+ ---> 2d97f6910b16
+Step 2/7 : WORKDIR /app
+ ---> Using cache
+ ---> c3dde7daa4ed
+Step 3/7 : COPY requirement.txt requirement.txt
+ ---> Using cache
+ ---> c88fa824d932
+Step 4/7 : RUN pip install -r requirement.txt
+ ---> Using cache
+ ---> bceed4728d59
+Step 5/7 : COPY . .
+ ---> aa16c853d277
+Step 6/7 : EXPOSE 1000
+ ---> Running in ecf322b362e8
+ ---> Removed intermediate container ecf322b362e8
+ ---> 00537375342b
+Step 7/7 : CMD ["python", "app.py"]
+ ---> Running in 50181daa8e5c
+ ---> Removed intermediate container 50181daa8e5c
+ ---> 713fdb6d2486
+Successfully built 713fdb6d2486
+Successfully tagged flask-app:latest
+ubuntu@ip-172-31-39-35:~/TASK/day17$ docker rm -f her-flask
+her-flask
+ubuntu@ip-172-31-39-35:~/TASK/day17$ docker run -d -p 1000:1000 --name she-flask flask-app
+c22cc627d60e91e3d901c136932bff2c4ce8f4a675a461a533aa1741a46eafc7
+ubuntu@ip-172-31-39-35:~/TASK/day17$ docker ps
+CONTAINER ID   IMAGE       COMMAND                  CREATED        STATUS                PORTS                                             NAMES
+1df1ffe9c6ea   nginx       "/docker-entrypoint.…"   21 hours ago   Up 21 hours           80/tcp, 0.0.0.0:8181->82/tcp, [::]:8181->82/tcp   conatiner_1
+abc3a01f6e0c   mysql:5.7   "docker-entrypoint.s…"   3 days ago     Up 3 days (healthy)   3306/tcp, 33060/tcp                               mysql
+ubuntu@ip-172-31-39-35:~/TASK/day17$ docker ps -a
+CONTAINER ID   IMAGE          COMMAND                  CREATED          STATUS                      PORTS                                             NAMES
+c22cc627d60e   flask-app      "python app.py"          18 seconds ago   Exited (1) 17 seconds ago                                                     she-flask
+2589c32fc9ff   687f305687eb   "python app.py"          22 minutes ago   Exited (1) 22 minutes ago                                                     lucid_cannon
+1df1ffe9c6ea   nginx          "/docker-entrypoint.…"   21 hours ago     Up 21 hours                 80/tcp, 0.0.0.0:8181->82/tcp, [::]:8181->82/tcp   conatiner_1
+2d2ee8d65be4   hello-world    "/hello"                 21 hours ago     Exited (0) 21 hours ago                                                       pedantic_poincare
+abc3a01f6e0c   mysql:5.7      "docker-entrypoint.s…"   3 days ago       Up 3 days (healthy)         3306/tcp, 33060/tcp                               mysql
+8253872508d5   nginx          "/docker-entrypoint.…"   5 days ago       Exited (0) 5 days ago                                                         eager_fermi
+91e1ee64f8fb   ubuntu         "/bin/bash"              5 days ago       Exited (0) 5 days ago                                                         pensive_bell
+ubuntu@ip-172-31-39-35:~/TASK/day17$ docker logs she-flask
+  File "/app/app.py", line 8
+    if__name__== '__main__':
+                            ^
+SyntaxError: invalid syntax
+ubuntu@ip-172-31-39-35:~/TASK/day17$ vim app.py
+ubuntu@ip-172-31-39-35:~/TASK/day17$ "app.py" 10L, 176B written
+ubuntu@ip-172-31-39-35:~/TASK/day17$ cat app.py
+from flask import Flask
+
+app = Flask(__name__)
+
+@app.route('/')
+def hello_world():
+    return 'Hello, World!'
+if __name__== '__main__':
+    app.run(host='0.0.0.0', port=1000)
+
+ubuntu@ip-172-31-39-35:~/TASK/day17$ docker run -d -p 1000:1000 --name she-flask flask-app
+docker: Error response from daemon: Conflict. The container name "/she-flask" is already in use by container "c22cc627d60e91e3d901c136932bff2c4ce8f4a675a461a533aa1741a46eafc7". You have to remove (or rename) that container to be able to reuse that name.
+
+Run 'docker run --help' for more information
+ubuntu@ip-172-31-39-35:~/TASK/day17$ docker rm -f she-flask
+she-flask
+ubuntu@ip-172-31-39-35:~/TASK/day17$ docker build -t flask-app .
+DEPRECATED: The legacy builder is deprecated and will be removed in a future release.
+            Install the buildx component to build images with BuildKit:
+            https://docs.docker.com/go/buildx/
+
+Sending build context to Docker daemon   29.7kB
+Step 1/7 : FROM python:3.9-slim
+ ---> 2d97f6910b16
+Step 2/7 : WORKDIR /app
+ ---> Using cache
+ ---> c3dde7daa4ed
+Step 3/7 : COPY requirement.txt requirement.txt
+ ---> Using cache
+ ---> c88fa824d932
+Step 4/7 : RUN pip install -r requirement.txt
+ ---> Using cache
+ ---> bceed4728d59
+Step 5/7 : COPY . .
+ ---> 0d2a4662a296
+Step 6/7 : EXPOSE 1000
+ ---> Running in 5ee1e7c4ad05
+ ---> Removed intermediate container 5ee1e7c4ad05
+ ---> 24ddd5c42247
+Step 7/7 : CMD ["python", "app.py"]
+ ---> Running in b8a5aeac264c
+ ---> Removed intermediate container b8a5aeac264c
+ ---> 6198cc272346
+Successfully built 6198cc272346
+Successfully tagged flask-app:latest
+ubuntu@ip-172-31-39-35:~/TASK/day17$ docker run -d -p 1000:1000 --name her-flask flask-app
+2f3267fdbe1fc7b10b250ffc6f6d913e4b72ef5819c0e4d2688755c88471a04d
+ubuntu@ip-172-31-39-35:~/TASK/day17$ docker ps
+CONTAINER ID   IMAGE       COMMAND                  CREATED         STATUS                PORTS                                             NAMES
+2f3267fdbe1f   flask-app   "python app.py"          6 seconds ago   Up 6 seconds          0.0.0.0:1000->1000/tcp, [::]:1000->1000/tcp       her-flask
+1df1ffe9c6ea   nginx       "/docker-entrypoint.…"   21 hours ago    Up 21 hours           80/tcp, 0.0.0.0:8181->82/tcp, [::]:8181->82/tcp   conatiner_1
+abc3a01f6e0c   mysql:5.7   "docker-entrypoint.s…"   3 days ago      Up 3 days (healthy)   3306/tcp, 33060/tcp                               mysql
+ubuntu@ip-172-31-39-35:~/TASK/day17$ docker tag flask-app ntitishgupta55/flask-app
+ubuntu@ip-172-31-39-35:~/TASK/day17$ docker push nitishgupta55/flask-app
+Using default tag: latest
+The push refers to repository [docker.io/nitishgupta55/flask-app]
+tag does not exist: nitishgupta55/flask-app:latest
+ubuntu@ip-172-31-39-35:~/TASK/day17$ docker tag her-flask ntitishgupta55/flask-app
+Error response from daemon: No such image: her-flask:latest
+ubuntu@ip-172-31-39-35:~/TASK/day17$ docker tag flask-app:latest ntitishgupta55/flask-app:latest
+ubuntu@ip-172-31-39-35:~/TASK/day17$ docker images
+                                                                                                   i Info →   U  In Use
+IMAGE                                        ID             DISK USAGE   CONTENT SIZE   EXTRA
+flask-app:latest                             6198cc272346        203MB         49.7MB    U
+hello-world:latest                           5e2309035332       25.9kB         9.49kB    U
+mysql:5.7                                    4bc6bc963e6d        700MB          149MB    U
+nginx:latest                                 abe47724e466        242MB         66.3MB    U
+ntitishgupta55/flask-app:latest              6198cc272346        203MB         49.7MB    U
+python:3.9-slim                              2d97f6910b16        185MB         47.2MB
+trainwithshubham/two-tier-flask-app:latest   8541f0fea487        792MB          149MB
+ubuntu:latest                                da6fc2be5478        160MB         45.3MB    U
+ubuntu@ip-172-31-39-35:~/TASK/day17$ docker push nitishgupta55/flask-app:latest
+The push refers to repository [docker.io/nitishgupta55/flask-app]
+tag does not exist: nitishgupta55/flask-app:latest
+ubuntu@ip-172-31-39-35:~/TASK/day17$ docker rmi nitishgupta55/flask-app:latest
+Error response from daemon: No such image: nitishgupta55/flask-app:latest
+ubuntu@ip-172-31-39-35:~/TASK/day17$ docker images
+                                                                                                   i Info →   U  In Use
+IMAGE                                        ID             DISK USAGE   CONTENT SIZE   EXTRA
+flask-app:latest                             6198cc272346        203MB         49.7MB    U
+hello-world:latest                           5e2309035332       25.9kB         9.49kB    U
+mysql:5.7                                    4bc6bc963e6d        700MB          149MB    U
+nginx:latest                                 abe47724e466        242MB         66.3MB    U
+ntitishgupta55/flask-app:latest              6198cc272346        203MB         49.7MB    U
+python:3.9-slim                              2d97f6910b16        185MB         47.2MB
+trainwithshubham/two-tier-flask-app:latest   8541f0fea487        792MB          149MB
+ubuntu:latest                                da6fc2be5478        160MB         45.3MB    U
+ubuntu@ip-172-31-39-35:~/TASK/day17$ docker rmi nitishgupta55/flask-app:latest
+Error response from daemon: No such image: nitishgupta55/flask-app:latest
+ubuntu@ip-172-31-39-35:~/TASK/day17$ docker tag flask-app:latest ntitishgupta55/flask-app:latest
+ubuntu@ip-172-31-39-35:~/TASK/day17$ docker push nitishgupta55/flask-app:latest
+The push refers to repository [docker.io/nitishgupta55/flask-app]
+tag does not exist: nitishgupta55/flask-app:latest
+ubuntu@ip-172-31-39-35:~/TASK/day17$ docker images
+                                                                                                   i Info →   U  In Use
+IMAGE                                        ID             DISK USAGE   CONTENT SIZE   EXTRA
+flask-app:latest                             6198cc272346        203MB         49.7MB    U
+hello-world:latest                           5e2309035332       25.9kB         9.49kB    U
+mysql:5.7                                    4bc6bc963e6d        700MB          149MB    U
+nginx:latest                                 abe47724e466        242MB         66.3MB    U
+ntitishgupta55/flask-app:latest              6198cc272346        203MB         49.7MB    U
+python:3.9-slim                              2d97f6910b16        185MB         47.2MB
+trainwithshubham/two-tier-flask-app:latest   8541f0fea487        792MB          149MB
+ubuntu:latest                                da6fc2be5478        160MB         45.3MB    U
+ubuntu@ip-172-31-39-35:~/TASK/day17$ docker push nitishgupta55/flask-app:latest
+The push refers to repository [docker.io/nitishgupta55/flask-app]
+tag does not exist: nitishgupta55/flask-app:latest
+ubuntu@ip-172-31-39-35:~/TASK/day17$ docker tag 6198cc272346 nitishgupta55/flask-app:latest
+ubuntu@ip-172-31-39-35:~/TASK/day17$ docker images | grep flask-app
+WARNING: This output is designed for human readability. For machine-readable output, please use --format.
+flask-app:latest                             6198cc272346        203MB         49.7MB   U
+nitishgupta55/flask-app:latest               6198cc272346        203MB         49.7MB   U
+ntitishgupta55/flask-app:latest              6198cc272346        203MB         49.7MB   U
+trainwithshubham/two-tier-flask-app:latest   8541f0fea487        792MB          149MB
+ubuntu@ip-172-31-39-35:~/TASK/day17$ docker push nitishgupta55/flask-app:latest
+The push refers to repository [docker.io/nitishgupta55/flask-app]
+7c0fa4737367: Pushed
+b6146ba1bd0b: Pushed
+fc7443084902: Mounted from library/python
+763d7a1cc7eb: Pushed
+38513bd72563: Mounted from library/python
+b3ec39b36ae8: Mounted from library/python
+fcbf2d61ad3b: Pushed
+ea56f685404a: Mounted from library/python
+latest: digest: sha256:6198cc272346ae4627fe21e2b8dd54274adb34a47718eb27de7b0a9816c20bbb size: 2054
