@@ -1,0 +1,25 @@
+pipeline{
+    agent any;
+    stage("Code"){
+        steps{
+            echo "code clone ho gya.."
+        }
+        
+    }
+    stage("Build"){
+        steps{
+            echo " Docker Build ho gya"
+        }
+        
+    }
+    stage("Test"){
+        steps{
+            echo " Devloper / tester likh kr dega"
+        }
+    }
+    stage("Deploy"){
+        steps{
+            echo "docker compose se deploy ho gya"
+        }
+    }
+}
